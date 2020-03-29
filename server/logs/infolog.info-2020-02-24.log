@@ -1,0 +1,14 @@
+[2020-02-24T07:28:06.319] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: 'dddddddddd',
+  create_date: '1582468171144',
+  id: '10024' }
+[2020-02-24T07:28:20.526] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: 'ssssssss',
+  create_date: '1582468171144',
+  id: '10025' }
+[2020-02-24T07:29:39.058] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10024' }
+[2020-02-24T07:29:41.916] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10025' }
+[2020-02-24T07:35:31.347] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: '烽火电竞手机端增加近期联赛专题页，资讯栏目增加近期联赛导航。王者直播发布推单玩法接口联调。',
+  create_date: '1582366854999',
+  id: '10019' }

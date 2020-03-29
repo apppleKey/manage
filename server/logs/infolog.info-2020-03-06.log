@@ -1,0 +1,5 @@
+[2020-03-06T15:40:07.309] [INFO] info - /api/note/edit POST [Object: null prototype] {
+  details:
+   '接口：http://rap2.itech8.net:38080/repository/editor?id=28&itf=1118\n蓝狐：http://lanhu.itech8.net/web/#/item/project/board?pid=ee190a88-a58f-4678-8e39-a7469adb56f7\n\nhttps://dev-wzzb.lkch8.site/live/api/play/data/get_history_match_data12:20\n\nhttps://dev-wzzb.lkch8.site/live/api/play/data/get_competition_situation_info12:20\n\nhttps://dev-wzzb.lkch8.site/live/api/play/data/get_lineup_info12:20\n\nhttps://dev-wzzb.lkch8.site/live/api/play/data/get_odds_info12:21\n\nroomId = 3363173\n\n1.1、昨天讨论了，横向滑动展示更多菜单\n1.2、赛程点击之后，跳转到现有的赛程页面不变\n1.3、直播点击之后，跟现有的页面差不多，分为体育和娱乐主播，页面布局稍微有变化（蓝湖上有图）\n1.4、关注不需要了，更换了入口\n1.5、我的保留现有的内容\n2.1、搜索按照新规则\n2.2需要同步开发，好礼是商城入口，发布是快捷发布入口',
+  title: 'app改版',
+  id: '15' }

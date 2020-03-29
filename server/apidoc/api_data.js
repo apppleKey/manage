@@ -1,0 +1,187 @@
+define({ "api": [
+  {
+    "type": "get",
+    "url": "/news/newsContent",
+    "title": "获取文本list",
+    "version": "1.0.0",
+    "name": "newsContent",
+    "group": "news",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>新闻id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果标识</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>结果说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": "<p>结果数据</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/11 200 OK\n{\n  \"code\": 1,\n  \"mess\": \"成功\",\n  \"data\": {}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "router/index.js",
+    "groupTitle": "news"
+  },
+  {
+    "type": "get",
+    "url": "获取用户列表",
+    "title": "",
+    "version": "1.0.0",
+    "name": "newsContent",
+    "group": "user",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>新闻id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果标识</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>结果说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": "<p>结果数据</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/11 200 OK\n{\n  \"code\": 1,\n  \"mess\": \"成功\",\n  \"data\": {}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "router/index.js",
+    "groupTitle": "user"
+  },
+  {
+    "type": "post",
+    "url": "添加工作记录",
+    "title": "",
+    "version": "1.0.0",
+    "name": "newsContent",
+    "group": "work",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "uid",
+            "description": "<p>这个人的ID</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "details",
+            "description": "<p>工作内容报告</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>新闻id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果标识</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>结果说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": "<p>结果数据</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/11 200 OK\n{\n  \"code\": 1,\n  \"mess\": \"成功\",\n  \"data\": {}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "router/index.js",
+    "groupTitle": "work"
+  }
+] });

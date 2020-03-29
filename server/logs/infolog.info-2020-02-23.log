@@ -1,0 +1,187 @@
+[2020-02-23T19:48:02.876] [INFO] info - server running  8989port....
+[2020-02-23T20:27:54.538] [INFO] info - server running  8989port....
+[2020-02-23T20:32:32.295] [INFO] info - server running  8989port....
+[2020-02-23T20:32:34.541] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: '完成竞猜各项工作未测试，配合测试完成昵称bug',
+  create_date: '1582281705575' }
+[2020-02-23T20:50:44.241] [INFO] info - server running  8989port....
+[2020-02-23T20:51:00.792] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: '跟测试对接竞猜（未对接完），催ui出动态评论设计；',
+  create_date: '1582367344745' }
+[2020-02-23T20:51:34.719] [INFO] info - server running  8989port....
+[2020-02-23T20:51:35.943] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: '跟测试对接竞猜（未对接完），催ui出动态评论设计；',
+  create_date: '1582367344745' }
+[2020-02-23T20:51:35.977] [INFO] info - [SELECT ERROR] -  ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1582367344745',details='跟测试对接竞猜（未对接完），催ui出动' at line 1
+[2020-02-23T20:51:35.978] [ERROR] info - { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1582367344745',details='跟测试对接竞猜（未对接完），催ui出动' at line 1
+    at Query.Sequence._packetToError (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:189:13)
+    at addChunk (_stream_readable.js:284:12)
+    --------------------
+    at Protocol._enqueue (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:198:25)
+    at C:\Users\vender\Desktop\front_manage\server\utils\mysqlquery.js:15:18
+    at Handshake.onConnect (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:526:10)
+    at Handshake._callback (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:488:16)
+    at Handshake.Sequence.end (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Handshake.Sequence.OkPacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:433:10)
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage:
+   'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'=\'1582367344745\',details=\'跟测试对接竞猜（未对接完），催ui出动\' at line 1',
+  sqlState: '42000',
+  index: 0,
+  sql:
+   'update  work_record create_date=\'1582367344745\',details=\'跟测试对接竞猜（未对接完），催ui出动态评论设计；\' where id = NULL' }
+[2020-02-23T20:52:41.285] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: '跟测试对接竞猜（未对接完），催ui出动态评论设计；',
+  create_date: '1582367344745',
+  id: '10023' }
+[2020-02-23T20:52:41.288] [INFO] info - [SELECT ERROR] -  ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1582367344745',details='跟测试对接竞猜（未对接完），催ui出动' at line 1
+[2020-02-23T20:52:41.306] [ERROR] info - { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1582367344745',details='跟测试对接竞猜（未对接完），催ui出动' at line 1
+    at Query.Sequence._packetToError (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:189:13)
+    at addChunk (_stream_readable.js:284:12)
+    --------------------
+    at Protocol._enqueue (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:198:25)
+    at C:\Users\vender\Desktop\front_manage\server\utils\mysqlquery.js:15:18
+    at Ping.onOperationComplete (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:526:10)
+    at Ping._callback (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:488:16)
+    at Ping.Sequence.end (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Ping.Sequence.OkPacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:433:10)
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage:
+   'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'=\'1582367344745\',details=\'跟测试对接竞猜（未对接完），催ui出动\' at line 1',
+  sqlState: '42000',
+  index: 0,
+  sql:
+   'update  work_record create_date=\'1582367344745\',details=\'跟测试对接竞猜（未对接完），催ui出动态评论设计；\' where id = \'10023\'' }
+[2020-02-23T20:58:02.417] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: 'obs聊天功能评估，先前调用web方案弃用，需重构方案',
+  create_date: '1582367088966',
+  id: '10021' }
+[2020-02-23T20:58:02.423] [INFO] info - [SELECT ERROR] -  ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1582367088966',details='obs聊天功能评估，先前调用web方案弃用，' at line 1
+[2020-02-23T20:58:02.437] [ERROR] info - { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1582367088966',details='obs聊天功能评估，先前调用web方案弃用，' at line 1
+    at Query.Sequence._packetToError (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:189:13)
+    at addChunk (_stream_readable.js:284:12)
+    --------------------
+    at Protocol._enqueue (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:198:25)
+    at C:\Users\vender\Desktop\front_manage\server\utils\mysqlquery.js:15:18
+    at Handshake.onConnect (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:526:10)
+    at Handshake._callback (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:488:16)
+    at Handshake.Sequence.end (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Handshake.Sequence.OkPacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:433:10)
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage:
+   'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'=\'1582367088966\',details=\'obs聊天功能评估，先前调用web方案弃用，\' at line 1',
+  sqlState: '42000',
+  index: 0,
+  sql:
+   'update  work_record create_date=\'1582367088966\',details=\'obs聊天功能评估，先前调用web方案弃用，需重构方案\' where id = \'10021\'' }
+[2020-02-23T20:58:44.865] [INFO] info - server running  8989port....
+[2020-02-23T20:58:46.665] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: 'obs聊天功能评估，先前调用web方案弃用，需重构方案',
+  create_date: '1582367088966',
+  id: '10021' }
+[2020-02-23T20:58:46.702] [INFO] info - [SELECT ERROR] -  ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1582367088966',details='obs聊天功能评估，先前调用web方案弃用，' at line 1
+[2020-02-23T20:58:46.703] [ERROR] info - { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1582367088966',details='obs聊天功能评估，先前调用web方案弃用，' at line 1
+    at Query.Sequence._packetToError (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:189:13)
+    at addChunk (_stream_readable.js:284:12)
+    --------------------
+    at Protocol._enqueue (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:198:25)
+    at C:\Users\vender\Desktop\front_manage\server\utils\mysqlquery.js:15:18
+    at Handshake.onConnect (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:526:10)
+    at Handshake._callback (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\Connection.js:488:16)
+    at Handshake.Sequence.end (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Handshake.Sequence.OkPacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\vender\Desktop\front_manage\server\node_modules\_mysql@2.18.1@mysql\lib\protocol\Parser.js:433:10)
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage:
+   'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'=\'1582367088966\',details=\'obs聊天功能评估，先前调用web方案弃用，\' at line 1',
+  sqlState: '42000',
+  index: 0,
+  sql:
+   'update  work_record create_date=\'1582367088966\',details=\'obs聊天功能评估，先前调用web方案弃用，需重构方案\' where Id = \'10021\'' }
+[2020-02-23T21:03:27.337] [INFO] info - server running  8989port....
+[2020-02-23T21:03:44.544] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: 'obs聊天功能评估，先前调用web方案弃用，需重构方案；',
+  create_date: '1582367088966',
+  id: '10021' }
+[2020-02-23T21:08:19.075] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: '跟测试对接竞猜（未对接完），催ui出动态评论设计',
+  create_date: '1582214400000',
+  id: '10023' }
+[2020-02-23T21:08:19.079] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: '跟测试对接竞猜（未对接完），催ui出动态评论设计',
+  create_date: '1582214400000',
+  id: '10023' }
+[2020-02-23T21:08:32.683] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: '完成竞猜各项工作未测试，配合测试完成昵称bug；',
+  create_date: '1582300800000',
+  id: '10016' }
+[2020-02-23T21:08:32.745] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: '完成竞猜各项工作未测试，配合测试完成昵称bug；',
+  create_date: '1582300800000',
+  id: '10016' }
+[2020-02-23T22:01:29.690] [INFO] info - server running  8989port....
+[2020-02-23T22:01:44.602] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10001' }
+[2020-02-23T22:05:46.276] [INFO] info - server running  8989port....
+[2020-02-23T22:07:21.922] [INFO] info - server running  8989port....
+[2020-02-23T22:07:38.493] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10002' }
+[2020-02-23T22:07:41.887] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10003' }
+[2020-02-23T22:07:44.037] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10004' }
+[2020-02-23T22:25:46.647] [INFO] info - server running  8989port....
+[2020-02-23T22:30:17.177] [INFO] info - server running  8989port....
+[2020-02-23T22:30:58.208] [INFO] info - server running  8989port....
+[2020-02-23T22:33:52.314] [INFO] info - server running  8989port....
+[2020-02-23T22:40:03.412] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: '完成竞猜各项工作未测试，配合测试完成昵称bug；',
+  create_date: '1582214400000',
+  id: '10016' }

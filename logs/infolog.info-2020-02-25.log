@@ -1,0 +1,11 @@
+[2020-02-25T10:16:14.862] [INFO] info - server running  8989port....
+[2020-02-25T10:20:14.760] [INFO] info - /api/work_record/edit POST [Object: null prototype] { details: 'sdf', create_date: '1582473600000', id: '10026' }
+[2020-02-25T20:52:19.119] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10031' }
+[2020-02-25T20:52:28.788] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10027' }
+[2020-02-25T20:52:30.056] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10028' }
+[2020-02-25T20:52:33.978] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10029' }
+[2020-02-25T20:52:35.308] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10030' }
+[2020-02-25T20:55:39.934] [INFO] info - /api/work_record/edit POST [Object: null prototype] {
+  details: ' 大转盘抽奖ui沟通绘制完成  接口沟通完成  ',
+  create_date: '1582560000000',
+  id: '10043' }

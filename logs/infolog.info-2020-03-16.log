@@ -1,0 +1,4 @@
+[2020-03-16T10:08:01.491] [INFO] info - /api/note/search GET { _t: '1584324481480', keyword: 'new' }
+[2020-03-16T10:08:05.228] [INFO] info - /api/note/search GET { _t: '1584324485220', keyword: 'app' }
+[2020-03-16T11:41:49.671] [INFO] info - /api/note/search GET { _t: '1584330109663', keyword: 'app' }
+[2020-03-16T17:54:50.486] [INFO] info - /api/note/search GET { _t: '1584352490462', keyword: 'a' }

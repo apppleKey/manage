@@ -1,0 +1,652 @@
+//提示
+@import './mixin.scss';
+
+.tips_box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  // @include wh(p2r(600),auto);
+  min-width: p2r(300);
+  text-align: center;
+  padding: p2r(20) 0;
+  border-radius: p2r(4);
+  background: rgba(0, 0, 0, 0.836);
+  // box-shadow: 0 0 p2r(30) $main;
+  border-radius: p2r(6);
+  cursor: auto;
+  font-size: p2r(24);
+  color: #e1e1e1;
+  z-index: 9999;
+  text-align: center;
+
+  .tips_text {
+    display: inline-block;
+    @include wh(100%, auto);
+    line-height: p2r(32);
+    padding: 0 p2r(20);
+    text-indent: p2r(20);
+    word-break: break-all;
+    color: #FFF;
+    vertical-align: middle;
+    // .warn{
+    //     display: inline-block;
+    //     @include wh(p2r(26),p2r(26));
+    //     border-radius: 50%;
+    //     text-align: center;
+    //     line-height: p2r(26);
+    //     vertical-align: middle;
+    //     background: url("/static/i.png") no-repeat center center/100% 100%;
+    //     margin-right: p2r(10);
+    // }
+  }
+}
+
+//警告层
+.alert_box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  @include wh(100%, 100%);
+  z-index: 9999;
+  background: rgba(0, 0, 0, .3);
+
+  .alert {
+    position: absolute;
+    left: 50%;
+    top: 4rem;
+    @include wh(p2r(500), auto);
+    border-radius: p2r(8);
+    margin-left: p2r(-250);
+
+    .title {
+      position: relative;
+      @include wh(100%, 2rem);
+      background: $main;
+      border-top-left-radius: p2r(8);
+      border-top-right-radius: p2r(8);
+      color: #FFF;
+      font-size: p2r(32);
+      font-weight: 500;
+      line-height: 2rem;
+      text-align: center;
+    }
+
+    .text {
+      position: relative;
+      @include wh(100%, auto);
+      background: #EEE;
+      color: #333;
+      padding: p2r(30);
+      line-height: p2r(50);
+      font-size: p2r(28);
+      word-break: break-all;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      position: relative;
+      @include wh(100%, 2rem);
+      background: $main;
+      border-bottom-left-radius: p2r(8);
+      border-bottom-right-radius: p2r(8);
+
+      #sure {
+        display: block;
+        @include wh(100%, 100%);
+        background: $main;
+        border-bottom-left-radius: p2r(8);
+        border-bottom-right-radius: p2r(8);
+        color: #FFF;
+        font-size: p2r(32);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+//loading
+.rotate_load {
+  position: fixed;
+  @include wh(100%, 100%);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.11);
+
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include rwh(200, 200);
+    margin-left: p2r(-100);
+    margin-top: p2r(-100);
+    z-index: 999;
+    animation: rotate360 linear 5s infinite;
+    background: transparent;
+
+    .load1,
+    .load2,
+    .load3 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include wh(100%, 100%);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .load1 {
+      z-index: 1000;
+
+      span {
+        @include wh(100%, 100%);
+        border-radius: 26% 74% 49% 51% / 21% 51% 49% 79%;
+        background: linear-gradient(to right, rgba(253, 157, 157, 0.55), #ff505b);
+        animation: morph1 ease 2s infinite;
+      }
+    }
+
+    .load2 {
+      z-index: 1001;
+
+      span {
+        @include wh(80%, 80%);
+        border-radius: 74% 26% 50% 50% / 53% 29% 71% 47%;
+        background: linear-gradient(to top, rgba(253, 157, 157, 0.55), #ff505b);
+        animation: morph2 ease 2s infinite;
+      }
+    }
+
+    .load3 {
+      z-index: 1002;
+
+      span {
+        @include wh(50%, 50%);
+        border-radius: 48% 52% 28% 72% / 48% 71% 29% 55%;
+        background: linear-gradient(to bottom, rgba(253, 157, 157, 0.55), #ff505b);
+        animation: morph3 ease 2s infinite;
+      }
+    }
+  }
+
+ .spinner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 901;
+    .rect1,
+    .rect2,
+    .rect3,
+    .rect4 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: p2r(200);
+      height: p2r(200);
+    //   transform: translate(-50%, -50%);
+    margin-left: p2r(-100);
+    margin-top: p2r(-100);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 60% 60%;
+      animation: stretchdelay 1s linear infinite;
+     
+    }
+    
+    .rect1 {
+      
+      background: url("/static/imgs/logo.png") no-repeat center center/30% 30%;
+      z-index: 905;
+      animation: none;
+    }
+
+    .rect2 {
+      background-image: url("/static/imgs/first.png");
+      z-index: 904;
+    }
+
+    .rect3 {
+      background-image: url("/static/imgs/second.png");
+      z-index: 903;
+    }
+
+    .rect4 {
+      background-image: url("/static/imgs/third.png");
+      z-index: 902;
+    }
+  }
+
+
+
+
+
+
+  @keyframes stretchdelay {
+    from {
+      transform: rotate(0deg)
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  .logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    @include rwh(100, 100);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: p2r(-50);
+    margin-top: p2r(-50);
+    z-index: 1004;
+
+    img {
+      display: block;
+      @include wh(auto, auto);
+      max-width: 70%;
+      max-height: 70%;
+    }
+  }
+}
+
+//修改上传头像组件颜色{
+.vue-slider-component .vue-slider-process {
+  background-color: #4951a5 !important;
+}
+
+//动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+  {
+  opacity: 0;
+}
+
+.fold-enter-active,
+.fold-leave-active {
+  transition: height .5s;
+}
+
+.fold-enter,
+.fold-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+  {
+  height: 0;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut
+}
+
+@-webkit-keyframes bounceInDown {
+
+  0%,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0)
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0)
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0)
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0)
+  }
+
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@keyframes bounceInDown {
+
+  0%,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0)
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0)
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0)
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0)
+  }
+
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown
+}
+
+@-webkit-keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0)
+  }
+
+  40%,
+  45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0)
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0)
+  }
+}
+
+@keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0)
+  }
+
+  40%,
+  45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0)
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0)
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn
+}
+
+.bounceOutDown {
+  -webkit-animation-name: bounceOutDown;
+  animation-name: bounceOutDown
+}
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite
+}
+
+.animated.delay-1s {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s
+}
+
+.animated.delay-2s {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s
+}
+
+.animated.delay-3s {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s
+}
+
+.animated.delay-4s {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s
+}
+
+.animated.delay-5s {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s
+}
+
+.animated.fast {
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s
+}
+
+.animated.faster {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s
+}
+
+.animated.slow {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s
+}
+
+.animated.slower {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s
+}
+
+@media (prefers-reduced-motion:reduce),
+(print) {
+  .animated {
+    -webkit-animation-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    -webkit-transition-duration: 1ms !important;
+    transition-duration: 1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important
+  }
+}
+
+//animate
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes morph1 {
+  0% {
+    border-radius: 26% 74% 49% 51% / 21% 51% 49% 79%;
+  }
+
+  25% {
+    border-radius: 74% 26% 50% 50% / 53% 29% 71% 47%;
+  }
+
+  50% {
+    border-radius: 48% 52% 28% 72% / 48% 71% 29% 55%;
+  }
+
+  75% {
+    border-radius: 48% 52% 76% 24% / 70% 49% 51% 30%;
+  }
+
+  100% {
+    border-radius: 26% 74% 49% 51% / 21% 51% 49% 79%;
+  }
+}
+
+@keyframes morph2 {
+  0% {
+    border-radius: 74% 26% 50% 50% / 53% 29% 71% 47%;
+  }
+
+  25% {
+    border-radius: 48% 52% 28% 72% / 48% 71% 29% 55%;
+  }
+
+  50% {
+    border-radius: 48% 52% 76% 24% / 70% 49% 51% 30%;
+  }
+
+  75% {
+    border-radius: 26% 74% 49% 51% / 21% 51% 49% 79%;
+  }
+
+  100% {
+    border-radius: 74% 26% 50% 50% / 53% 29% 71% 47%;
+  }
+}
+
+@keyframes morph3 {
+  0% {
+    border-radius: 48% 52% 28% 72% / 48% 71% 29% 55%;
+  }
+
+  25% {
+    border-radius: 48% 52% 76% 24% / 70% 49% 51% 30%;
+  }
+
+  50% {
+    border-radius: 26% 74% 49% 51% / 21% 51% 49% 79%;
+  }
+
+  75% {
+    border-radius: 74% 26% 50% 50% / 53% 29% 71% 47%;
+  }
+
+  100% {
+    border-radius: 48% 52% 28% 72% / 48% 71% 29% 55%;
+  }
+}

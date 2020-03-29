@@ -1,0 +1,26 @@
+[2020-03-04T09:19:12.065] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10072' }
+[2020-03-04T09:19:16.294] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10075' }
+[2020-03-04T10:59:39.220] [INFO] info - /api/note/search GET { _t: '1583290779205', keyword: '英国行' }
+[2020-03-04T10:59:48.325] [INFO] info - /api/note/search GET { _t: '1583290788302', keyword: '' }
+[2020-03-04T11:03:09.559] [INFO] info - /api/note/edit POST [Object: null prototype] {
+  details:
+   'https://jira.itech8.net:4443/browse/KINGLIVE-2960    移动端英国行专题入口  vender\nhttps://jira.itech8.net:4443/browse/KINGLIVE-2959     PC端英国行专题入口   vender\nhttps://jira.itech8.net:4443/browse/KINGLIVE-2903    【H5端】主播房间的小助手入口替换成动态gif图  已完成\nhttps://jira.itech8.net:4443/browse/KINGLIVE-2890  【PC端】个人中心我的关系-我的粉丝，增加搜索功能   clark  3.12\nhttps://jira.itech8.net:4443/browse/KINGLIVE-2832    【PC端】更换皮肤，主题为欧洲杯  tony 3.12\nhttps://jira.itech8.net:4443/browse/KINGLIVE-2831   【H5端】新增欧洲杯主题皮肤  tony3.12\nhttps://jira.itech8.net:4443/browse/KINGLIVE-2993  H5-王者号:用户成为王者号用户后，部分出现头像的地方都需要显示加V  tim 3.12\n\nhttps://jira.itech8.net:4443/browse/KINGLIVE-2836  【H5端】欧洲杯专题上线  tony 3.27\nhttps://jira.itech8.net:4443/browse/KINGLIVE-2864  【PC端】欧洲杯专题上线  clark  3.27',
+  title: 'kaka 单子',
+  id: '11' }
+[2020-03-04T11:08:57.749] [INFO] info - /api/note/search GET { _t: '1583291337722', keyword: 'king' }
+[2020-03-04T11:35:49.665] [INFO] info - /api/note/edit POST [Object: null prototype] {
+  details:
+   '接口：http://rap2.itech8.net:38080/repository/editor?id=28&itf=1118\n蓝狐：http://lanhu.itech8.net/web/#/item/project/board?pid=ee190a88-a58f-4678-8e39-a7469adb56f7\n\n1.1、昨天讨论了，横向滑动展示更多菜单\n1.2、赛程点击之后，跳转到现有的赛程页面不变\n1.3、直播点击之后，跟现有的页面差不多，分为体育和娱乐主播，页面布局稍微有变化（蓝湖上有图）\n1.4、关注不需要了，更换了入口\n1.5、我的保留现有的内容\n2.1、搜索按照新规则\n2.2需要同步开发，好礼是商城入口，发布是快捷发布入口',
+  title: 'app改版',
+  id: '15' }
+[2020-03-04T15:06:25.321] [INFO] info - /api/note/search GET { _t: '1583305585316', keyword: 'king' }
+[2020-03-04T15:07:21.607] [INFO] info - /api/note/edit POST [Object: null prototype] {
+  details:
+   'https://jira.itech8.net:4443/browse/<span style=\'color:red;\'>KING</span>LIVE-2960    移动端英国行专题入口  vender\nhttps://jira.itech8.net:4443/browse/<span style=\'color:red;\'>KING</span>LIVE-2959     PC端英国行专题入口   vender\nhttps://jira.itech8.net:4443/browse/<span style=\'color:red;\'>KING</span>LIVE-2903    【H5端】主播房间的小助手入口替换成动态gif图  已完成\nhttps://jira.itech8.net:4443/browse/<span style=\'color:red;\'>KING</span>LIVE-2890  【PC端】个人中心我的关系-我的粉丝，增加搜索功能   clark  3.12\nhttps://jira.itech8.net:4443/browse/<span style=\'color:red;\'>KING</span>LIVE-2832    【PC端】更换皮肤，主题为欧洲杯  tony 3.12\nhttps://jira.itech8.net:4443/browse/<span style=\'color:red;\'>KING</span>LIVE-2831   【H5端】新增欧洲杯主题皮肤  tony3.12\nhttps://jira.itech8.net:4443/browse/<span style=\'color:red;\'>KING</span>LIVE-2993  H5-王者号:用户成为王者号用户后，部分出现头像的地方都需要显示加V  tim 3.12\n\nhttps://jira.itech8.net:4443/browse/KINGLIVE-3014 KINGLIVE-3014 【H5端】体育页面的电竞点击后直接跳转烽火电竞站  热分支\n\nhttps://jira.itech8.net:4443/browse/<span style=\'color:red;\'>KING</span>LIVE-2836  【H5端】欧洲杯专题上线  tony 3.27\nhttps://jira.itech8.net:4443/browse/<span style=\'color:red;\'>KING</span>LIVE-2864  【PC端】欧洲杯专题上线  clark  3.27',
+  title: 'kaka 单子',
+  id: '11' }
+[2020-03-04T20:49:50.754] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10081' }
+[2020-03-04T20:49:52.896] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10082' }
+[2020-03-04T20:49:55.059] [INFO] info - /api/work_record/delete POST [Object: null prototype] { id: '10083' }
+[2020-03-04T20:52:01.887] [INFO] info - /api/note/search GET { _t: '1583326321863', keyword: 'app' }
+[2020-03-04T20:52:12.043] [INFO] info - /api/note/search GET { _t: '1583326332027', keyword: '' }

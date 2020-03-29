@@ -1,0 +1,5 @@
+[2020-03-11T10:37:08.773] [INFO] info - /api/note/edit POST [Object: null prototype] {
+  details:
+   'KINGLIVE-1527  【H5端】增加忘记密码功能  tim  \nKINGLIVE-2590【H5端】竞猜页面优化  tim\nKINGLIVE-2588【手机端】竞猜页面优化  tim\nKINGLIVE-1200 【H5端】增加主播招聘引导页面\nKINGLIVE-1025【PC端】个人主页-近期活动跟随风采活动进行更新 \nKINGLIVE-3051 【PC端】好友推荐页面，优化隐藏被推荐人的电话号码 jf\nKINGLIVE-2959【PC端】增加诺哥游英国专题入口  vender\nKINGLIVE-2960【手机端】增加诺哥游英国专题的入口 vender\nKINGLIVE-1525【H5端】增加忘记密码功能  tim\nKINGLIVE-402  【H5端】进入直播观看时提示网络设置  tim.\nKINGLIVE-204 【H5端】增加发送礼物功能  tim\nKINGLIVE-1604  H5：资讯页面优化  tim?    早就完成，单子未关闭\n\nKINGLIVE-2752【PC端】钻石兑换页面，提交提案时去掉游戏网址，时间改成存款时间 已完成\nKINGLIVE-2822 【PC端】主播开播能设置密码房间  vender\nKINGLIVE-2831 【H5端】新增欧洲杯主题皮肤  tony 已完成\nKINGLIVE-2832  【PC端】更换皮肤，主题为欧洲杯 tony 已完成\nKINGLIVE-2836 【H5端】欧洲杯专题上线\nKINGLIVE-2864  【PC端】欧洲杯专题上线  ',
+  title: '3.26',
+  id: '18' }

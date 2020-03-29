@@ -1,0 +1,975 @@
+/*混合用法*/
+//宽高
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+//相对定位靠左
+@mixin absl($l, $t) {
+    position: absolute;
+    left: $l;
+    top: $t;
+}
+
+//相对定位靠右
+@mixin absr($r, $t) {
+    position: absolute;
+    right: $r;
+    top: $t;
+}
+
+//字体过多显示省略号
+@mixin omit($l) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $l;
+    -webkit-box-orient: vertical;
+}
+
+//背景不重复居中全覆盖
+@mixin bgdf {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+//背景不重复居中压缩
+@mixin bgys {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@function p2r($p) {
+    @return ($p / 37.5 * 1rem);
+}
+
+/*颜色变量*/
+$red:#ff4560;
+$gray:#878787;
+$text:#0d0d0d;
+$c333:#333;
+$c666:#666;
+$light:#f5f5f5;
+$orange:#ff5500;
+
+// 混合用法使用示例 @include wh(100px,100px);
+// 函数直接使用 width:p2r(72);
+// 颜色变量直接使用 color:$text;
+/*默认START*/
+html,
+body,
+div,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+form,
+input,
+textarea,
+th,
+td,
+select {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    background: #fff9f9;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #333;
+    padding: 0 20px;
+    padding-bottom: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+strong,
+em {
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    
+    &:hover{
+        text-decoration: none;
+    }
+    &:focus{
+        text-decoration: none;
+    }
+    &:visited{
+        text-decoration: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+input,
+textarea {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+.tl {
+    text-align: left;
+}
+
+.tc {
+    text-align: center
+}
+
+.tr {
+    text-align: right;
+}
+
+.ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.w1240 {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.mrnull {
+    margin-right: 0 !important;
+}
+
+.mlnull {
+    margin-left: 0 !important;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+/*默认END*/
+.bg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    @include wh(100%, auto);
+    z-index: 1;
+}
+
+.matchlistPC {
+    position: relative;
+    @include wh(100%, auto);
+    max-width: 1240px;
+    margin: 0 auto;
+    z-index: 2;
+
+    .clearfix {
+        zoom: 1;
+    }
+
+    .clearfix:after {
+        content: " ";
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        display: block;
+        clear: both;
+        overflow: hidden;
+    }
+
+    .fl {
+        float: left
+    }
+
+    .fr {
+        float: right
+    }
+
+    .title {
+        position: relative;
+        @include wh(100%, 61px);
+        border: 1px solid #efefef;
+        background: #FFF;
+        line-height: 59px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #424242;
+        cursor: default;
+        padding: 0 35px;
+        margin-top: 30px;
+
+        .title_name {
+            @include wh(auto, 100%);
+            color: #ff3240;
+            border-bottom: 2px solid #ff4a46;
+        }
+    }
+
+    .nav-bar {
+        // margin-top: 16px;
+        border: 1px solid #efefef;
+        background: #FFF;
+        @include wh(100%, auto);
+        max-width: 1240px;
+        position: relative;
+        padding: 10px 0;
+        &.fixedTop{
+            position: fixed;
+            margin: 0 auto;
+            top:0;
+            z-index: 10;
+            box-shadow: 0 0 5px rgb(167, 166, 166);
+        }
+        .type-select .item {
+            height: 50px;
+            margin-left: 30px;
+            font-size: 16px;
+            line-height: 50px;
+            text-align: center;
+            color: #6a6464;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: #ff505b;
+                width: 0;
+                height: 3px;
+                transition: .5 all;
+            }
+
+            &.on {
+                color: #ff505b;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+
+            &:hover {
+                color: #ff505b;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .date-select {
+          
+          
+            padding: 7px 0;
+            text-align: center;
+            margin-top: 20px;
+
+            .date {
+                width: 90px;
+                height: 46px;
+                margin-left: 50px;
+                border-radius: 8px;
+                color: #6a6464;
+                // vertical-align: top;
+                line-height: 23px;
+                display: inline-block;
+                cursor: pointer;
+                transition: .5s all;
+
+                &:nth-child(1) {
+                    margin-left: 0;
+                }
+
+                &.on {
+                    background-color: #ff505b;
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: #ff505b;
+                    color: white;
+                }
+            }
+        }
+
+
+    }
+
+    .empty-placeholder {
+        height: 152px;
+        margin-top: 16px;
+
+        &.hidden {
+            display: none
+        }
+    }
+
+    .list {
+        position: relative;
+        @include wh(100%, auto);
+        margin-top: 16px;
+        border: 1px solid #efefef;
+        background: #FFF;
+
+        .item {
+            position: relative;
+            @include wh(100%, 130px);
+            font-size: 14px !important;
+            color: #3a3a3a;
+            padding: 18px 34px;
+            border-bottom: 1px solid #efefef;
+
+            &:hover {
+                background: #efefef;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .time_team {
+                position: relative;
+                @include wh(45%, 100%);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    @include wh(1px, 60px);
+                    border-left: 1px solid #efefef;
+                    margin-top: -30px;
+                }
+
+                .time {
+                    position: relative;
+                    @include wh(30%, 100%);
+                    text-align: center;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        @include wh(1px, 60px);
+                        border-left: 1px solid #efefef;
+                        margin-top: -30px;
+                    }
+
+                    .match_name {
+                        @include wh(100%, 20px);
+                        font-size: 16px;
+                        line-height: 20px;
+                        text-align: center;
+                        @include omit(1);
+                    }
+
+                    .match_time {
+                        @include wh(100%, 56px);
+                        font-size: 22px;
+                        font-weight: 600;
+                        line-height: 56px;
+                        text-align: center;
+                    }
+
+                    .match_status {
+                        line-height: 25px;
+                        text-align: center;
+                        color: #FFF;
+                        display: none;
+
+                        &.living {
+                            @include wh(70px, 25px);
+                            display: inline-block;
+                            background: linear-gradient(47deg, #ff3240 0%, #fe5f69 100%), linear-gradient(#f6f6f6, #f6f6f6);
+                            background-blend-mode: normal;
+                            box-shadow: 0px 3px 7px 0px rgba(255, 50, 64, 0.35);
+
+                            &:hover {
+                                border: 1px solid #ff3240;
+                                background: #FFF;
+                                color: #ff3240;
+                            }
+
+                            &:active {
+                                border: 1px solid #F00;
+                                background: #F00;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+
+
+                .team {
+                    position: relative;
+                    @include wh(70%, 100%);
+
+                    .team_box {
+                        position: relative;
+                        @include wh(auto, 100%);
+                        margin: 0 auto;
+                        padding: 0 5px;
+                        line-height: 93px;
+
+                        .sport_ico {
+                            @include wh(20%, auto);
+                            vertical-align: middle;
+                        }
+
+                        .name_score {
+                            @include wh(80%, 100%);
+                            margin-left: 20px;
+                            font-size: 18px;
+                            color: #3a3a3a;
+                            max-width: 60%;
+                            max-height: 94px;
+                            overflow: hidden;
+
+                            .team_a,
+                            .team_b {
+                                @include wh(auto, 50%);
+                                max-width: 100%;
+                                max-height: 47px;
+                                overflow: hidden;
+                                line-height: 47px;
+
+                                .team_name {
+                                    @include wh(auto, 100%);
+                                    margin-right: 10px;
+                                    max-width: 80%;
+                                    max-height: 47px;
+                                    overflow: hidden;
+                                    font-size: 16px;
+                                    @include omit(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .podcaster {
+                position: relative;
+                @include wh(55%, 100%);
+
+                .podcasters {
+                    @include wh(76%, 100%);
+                    text-align: center;
+                    line-height: 94px;
+
+                    .podcaster_item {
+                        position: relative;
+                        display: inline-block;
+                        @include wh(25%, 100%);
+                        min-width: 30px;
+                        max-width: 81px;
+                        vertical-align: middle;
+                        margin-left: 10px;
+                        cursor: pointer;
+
+                        .podcaster_avatar {
+                            position: relative;
+                            @include wh(100%, auto);
+
+                            .podcaster_avatar_img {
+                                display: block;
+                                @include wh(100%, auto);
+                                border-radius: 50%;
+                                max-height: 81px;
+                                min-height: 80px;
+                                background: #f0eeee;
+                            }
+
+                            .subscript {
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                margin-left: -30%;
+                                @include wh(60%, 16px);
+                                color: #FFF;
+                                line-height: 16px;
+                                font-size: 14px;
+                                font-weight: 600;
+                                text-align: center;
+                                background: linear-gradient(47deg, #ff3240 0%, #fe5f69 100%);
+                                border-radius: 8px;
+                            }
+                        }
+
+                        .podcaster_name {
+                            @include wh(120%, 20px);
+                            line-height: 20px;
+                            font-size: 14px;
+                            color: #3a3a3a;
+                            text-align: center;
+                            @include omit(1);
+                        }
+                    }
+
+                    .no_podcaster_item {
+                        position: relative;
+                        @include wh(100%, 100%);
+                        padding: 0 10px;
+                        line-height: 93px;
+                        @include omit(1);
+
+                        .podcaster_avatar_img {
+                            display: inline-block;
+                            vertical-align: middle;
+                            @include wh(15%, auto);
+                            line-height: 93px;
+                            min-height: 80px;
+                            background: #f0eeee;
+                        }
+                    }
+                }
+
+                .to_live {
+                    @include wh(83px, 25px);
+                    border: 1px solid #ff4853;
+                    background: #FFF;
+                    text-align: center;
+                    line-height: 23px;
+                    color: #ff4853;
+                    font-size: 16px;
+                    margin-top: 34px;
+
+                    &:hover {
+                        background: #ff4853;
+                        color: #FFF;
+                    }
+
+                    &:active {
+                        background: #6b080f;
+                        color: #ff4853;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.matchlistMB {
+    position: relative;
+    @include wh(100%, auto);
+    margin: 0 auto;
+    z-index: 2;
+
+    .title {
+        position: relative;
+        @include wh(100%, p2r(80));
+        border: 1px solid #efefef;
+        background: #FFF;
+        padding: 0 p2r(35);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: p2r(30);
+        font-weight: 600;
+        color: #3a3a3a;
+        ;
+
+        .title_name {
+            @include wh(auto, 100%);
+            color: #ff3240;
+            border-bottom: 2px solid #ff4a46;
+            line-height: p2r(80);
+        }
+    }
+
+    .nav-bar {
+        // margin-top: p2r(16);
+        border: 1px solid #efefef;
+        background: #FFF;
+        @include wh(100%, auto);
+        max-width: 1240px;
+        position: relative;
+        padding: p2r(10) 0;
+        font-size: 12px;
+       
+        &.fixedTop{
+            position: fixed;
+            margin: 0 auto;
+            top:0;
+            z-index: 10;
+            box-shadow: 0 0 5px rgb(167, 166, 166);
+        }
+        .type-select .item {
+            height: p2r(50);
+            margin-left: p2r(30);
+            text-align:left;
+            line-height: p2r(50);
+            // text-align: center;
+            color: #6a6464;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: #ff505b;
+                width: 0;
+                height: 3px;
+                transition: .5 all;
+            }
+
+            &.on {
+                color: #ff505b;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+
+            &:hover {
+                color: #ff505b;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .date-select {
+          
+          
+            padding: 7px 0;
+            text-align: center;
+            margin-top: p2r(20);
+
+            .date {
+                width: p2r(90);
+                // height: p2r(46);
+                margin-left: p2r(30);
+                color: #6a6464;
+                // vertical-align: top;
+                line-height: p2r(30);
+                display: inline-block;
+                cursor: pointer;
+                transition: .5s all;
+
+                &:nth-child(1) {
+                    margin-left: 0;
+                }
+
+                &.on {
+                    background-color: #ff505b;
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: #ff505b;
+                    color: white;
+                }
+            }
+        }
+
+
+    }
+
+    .empty-placeholder {
+        height: p2r(152);
+        margin-top:p2r(16);
+
+        &.hidden {
+            display: none
+        }
+    }
+    .list {
+        position: relative;
+        @include wh(100%, auto);
+        margin-top: p2r(20);
+
+        .item {
+            position: relative;
+            @include wh(100%, auto);
+            background: #FFF;
+            border: 1px solid #efefef;
+            padding: 0 p2r(10);
+            margin-bottom: p2r(20);
+
+            .time_team {
+                position: relative;
+                @include wh(100%, p2r(120));
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #efefef;
+
+                .time {
+                    position: relative;
+                    @include wh(40%, 100%);
+                    color: #333;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: -2px;
+                        top: 50%;
+                        @include wh(1px, p2r(80));
+                        margin-top: p2r(-40);
+                        background: #efefef;
+                    }
+
+                    .match_name {
+                        position: relative;
+                        @include wh(100%, 50%);
+                        text-align: left;
+                        line-height: p2r(60);
+                        font-size: p2r(22);
+                        padding: 0 p2r(10);
+                        @include omit(1);
+                    }
+
+                    .match_time {
+                        float: left;
+                        @include wh(auto, 50%);
+                        line-height: p2r(60);
+                        margin-left: p2r(10);
+                        font-size: p2r(26);
+                        font-weight: 600;
+                    }
+
+                    // .match_name,.match_time{
+                    //     @include wh(p2r(150),50%);
+                    //     line-height: p2r(50);
+                    //     text-align: center;
+                    //     font-size: p2r(22);
+                    //     @include omit(1);
+                    // }
+                    // .match_time{
+                    //     font-weight: 600;
+                    //     font-size: p2r(26);
+                    // }
+                    .match_status {
+                        float: right;
+                        @include wh(auto, p2r(40));
+                        margin: p2r(10) p2r(20) 0 0;
+                        padding: 0 p2r(10);
+                        text-align: center;
+                        line-height: p2r(40);
+                        color: #FFF;
+                        background: linear-gradient(47deg, #ff3240 0%, #fe5f69 100%);
+                        display: none;
+
+                        &.living {
+                            display: block;
+                        }
+
+                        &:active {
+                            border: 1px solid #ff4853;
+                            background: #FFF;
+                            color: #ff4853;
+                        }
+                    }
+                }
+
+                .team {
+                    position: relative;
+                    @include wh(60%, 100%);
+
+                    .team_box {
+                        position: relative;
+                        @include wh(100%, 100%);
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 p2r(10);
+
+                        .sport_ico {
+                            @include wh(p2r(60), p2r(60));
+                        }
+
+                        .name_score {
+                            flex: 1;
+                            height: 100%;
+
+                            .team_a,
+                            .team_b {
+                                @include wh(100%, 50%);
+                                padding-left: p2r(10);
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-around;
+                                align-items: center;
+                                font-size: p2r(26);
+                                color: #333;
+
+                                .team_name {
+                                    @include wh(70%, 100%);
+                                    line-height: p2r(60);
+                                    @include omit(1);
+                                    text-align: left;
+                                }
+
+                                .team_score {
+                                    @include wh(30%, 100%);
+                                    line-height: p2r(60);
+                                    @include omit(1);
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .podcaster {
+                position: relative;
+                @include wh(100%, p2r(150));
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 p2r(10);
+
+                .to_live {
+                    @include wh(p2r(100), p2r(40));
+                    color: #ff3240;
+                    background: #FFF;
+                    border: 1px solid #ff3240;
+                    font-size: p2r(22);
+                    text-align: center;
+                    line-height: p2r(38);
+
+                    &:active {
+                        border: none;
+                        background: linear-gradient(47deg, #ff3240 0%, #fe5f69 100%);
+                        color: #FFF;
+                    }
+                }
+
+                .podcasters {
+                    flex: 1;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 0 p2r(10);
+                    overflow: hidden;
+
+                    .podcaster_item {
+                        @include wh(p2r(120), 100%);
+                        // display: flex;
+                        // flex-direction: column;
+                        // justify-content: center;
+                        // align-items: center;
+                        float: left;
+
+                        .podcaster_avatar {
+                            position: relative;
+                            // @include wh(p2r(60), auto);
+
+                            .podcaster_avatar_img {
+                                display: block;
+                                @include wh(p2r(120), p2r(120));
+                                border-radius: 50%;
+                                // max-height: p2r(60);
+                            }
+
+                            .subscript {
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                @include wh(p2r(60), p2r(20));
+                                border-radius: p2r(10);
+                                line-height: p2r(20);
+                                color: #FFF;
+                                text-align: center;
+                                margin-left: p2r(-30);
+                                font-size: p2r(18);
+                                background: linear-gradient(47deg, #ff3240 0%, #fe5f69 100%);
+                            }
+                        }
+
+                        .podcaster_name {
+                            @include wh(100%, p2r(30));
+                            line-height: p2r(30);
+                            font-size: p2r(20);
+                            text-align: center;
+                            @include omit(1);
+                        }
+                    }
+
+                    .no_podcaster_item {
+                        position: relative;
+                        @include wh(100%, 100%);
+                        padding: 0 10px;
+                        line-height: p2r(100);
+                        @include omit(1);
+                        font-size: p2r(20);
+
+                        .podcaster_avatar_img {
+                            display: inline-block;
+                            vertical-align: middle;
+                            @include wh(15%, auto);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
